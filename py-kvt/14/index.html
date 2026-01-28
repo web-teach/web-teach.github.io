@@ -98,12 +98,12 @@
               webkitallowfullscreen="true">
             </iframe> 
           </div>
-            <a class="btn btn-lg ok-btn mt-3" href="https://drive.google.com/drive/folders/1ZIPvS13-QDUBCY-G_v76KOyjnaKZBy5s?usp=sharing" target="_blank" style="background: linear-gradient(#752fc5, #677ff7);"> 
+            <!-- <a class="btn btn-lg ok-btn mt-3" href="https://drive.google.com/drive/folders/1ZIPvS13-QDUBCY-G_v76KOyjnaKZBy5s?usp=sharing" target="_blank" style="background: linear-gradient(#752fc5, #677ff7);"> 
               База даних</a>
 
         <a class="btn btn-lg ok-btn mt-3" href="https://github.com/webteacher/artists_db" target="_blank" > 
-                Код з уроку та ДЗ</a>
-              <a class="btn btn-lg ok-btn mt-3" href="https://kahoot.it/challenge/03117748" target="_blank" > 
+                Код з уроку та ДЗ</a> -->
+              <a class="btn btn-lg ok-btn mt-3" href="https://kahoot.it/challenge/02504733?challenge-id=922fc38c-2872-4617-bd06-7ff74cda0a5b_1769613362500" target="_blank" > 
                 Кахут по базах даних</a>
         </div>
          
@@ -127,12 +127,12 @@
         </div>
         <a class="btn btn-lg ok-btn mt-3" href="https://sqlitebrowser.org/dl/" target="_blank" style="background: linear-gradient(#752fc5, #677ff7);"> 
           Завантажити DB Browser for SQLite</a>
-          <a class="btn btn-lg ok-btn mt-3" href="https://github.com/DenysKruchun/data-base" target="_blank" style="background: linear-gradient(#752fc5, #677ff7);"> 
-            Завантажити базу даних для роботи</a>
+          <!-- <a class="btn btn-lg ok-btn mt-3" href="https://github.com/DenysKruchun/data-base" target="_blank" style="background: linear-gradient(#752fc5, #677ff7);"> 
+            Завантажити базу даних для роботи</a> -->
          <div class='task my-3'>
   <h3>ЗАВДАННЯ ПРОЄКТУ</h3>
   <p>
-    Нас попросили допомогти з розробкою бази даних для інтернет-магазину. Наше завдання — організувати керування базою даних та взаємодію з нею через консоль.
+    Нас попросили допомогти з розробкою бази даних для інтернет-магазину. Наше завдання — створити базу даних та реалізувати клас для зручної взаємодії з нею.
   </p>
   Виконайте наступні кроки:
   <div class="accordion" id="accordionExample">
@@ -147,14 +147,22 @@
       <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample">
         <div class="card-body">
           <p>
-            Створити базу даних <code>shop.db</code> та таблиці Товари, Категорія, Замовлення, Кошик:
-            <ul>
-              <li class="dot">Таблиця <code>Товари</code> містить поля: <code>id</code>, <code>назва</code>, <code>опис</code>, <code>ціна</code>, <code>id_категорії</code></li>
-              <li class="dot">Таблиця <code>Категорія</code> містить поля: <code>id</code>, <code>назва</code></li>
-              <li class="dot">Таблиця <code>Замовлення</code> містить поля: <code>id</code>, <code>дата</code>, <code>товари</code>, <code>ціна</code></li>
-              <li class="dot">Таблиця <code>Кошик</code> містить поля: <code>id</code>, <code>товари</code>, <code>загальна ціна</code></li>
-            </ul>
+            Створити базу даних <code>shop.db</code> з наступними таблицями:
           </p>
+          <ul>
+            <li class="dot">Таблиця <code>categories</code> (Категорії): <code>id</code>, <code>name</code></li>
+            <li class="dot">Таблиця <code>products</code> (Товари): <code>id</code>, <code>name</code>, <code>description</code>, <code>price</code>, <code>category_id</code></li>
+            <li class="dot">Таблиця <code>orders</code> (Замовлення): <code>id</code>, <code>date</code>, <code>total_price</code></li>
+            <li class="dot">Таблиця <code>order_items</code> (Позиції замовлення): <code>id</code>, <code>order_id</code>, <code>product_id</code>, <code>quantity</code>, <code>price</code></li>
+          </ul>
+          <div class="alert alert-info mt-3">
+            <b>💡 Підказка:</b> Використовуйте <code>FOREIGN KEY</code> для зв'язку таблиць:
+            <ul class="mb-0 mt-2">
+              <li><code>products.category_id</code> → <code>categories.id</code></li>
+              <li><code>order_items.order_id</code> → <code>orders.id</code></li>
+              <li><code>order_items.product_id</code> → <code>products.id</code></li>
+            </ul>
+          </div>
         </div>
       </div>
     </div>
@@ -162,21 +170,22 @@
       <div class="card-header" id="headingTwo">
         <h2 class="mb-0">
           <button class="btn btn-link btn-block text-left collapsed" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-            <h5><b>2)</b> Реалізувати клас DatabaseManager</h5>
+            <h5><b>2)</b> Наповнити базу даними</h5>
           </button>
         </h2>
       </div>
       <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
         <div class="card-body">
           <p>
-            Реалізувати клас <code>DatabaseManager</code> для взаємодії з базою даних, який буде містити методи для маніпуляції базою даних, наприклад:
+            Додати тестові дані до бази:
           </p>
           <ul>
-            <li class="dot">Отримання всіх товарів з бази даних</li>
-            <li class="dot">Отримання всіх товарів певної категорії</li>
-            <li class="dot">Пошук по базі товарів</li>
-            <li class="dot">Створення нових записів та видалення в таблицях Замовлення та Кошик</li>
+            <li class="dot">Мінімум 3 категорії (наприклад: Електроніка, Одяг, Книги)</li>
+            <li class="dot">Мінімум 5 товарів у різних категоріях</li>
           </ul>
+          <div class="alert alert-info mt-3">
+            <b>💡 Підказка:</b> Для вставки кількох записів використовуйте <code>executemany()</code> або декілька <code>INSERT INTO</code> команд.
+          </div>
         </div>
       </div>
     </div>
@@ -184,23 +193,32 @@
       <div class="card-header" id="headingThree">
         <h2 class="mb-0">
           <button class="btn btn-link btn-block text-left collapsed" type="button" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-            <h5><b>3)</b> Реалізувати клас OnlineStore</h5>
+            <h5><b>3)</b> Реалізувати клас ShopDatabase</h5>
           </button>
         </h2>
       </div>
       <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordionExample">
         <div class="card-body">
           <p>
-            Реалізувати клас <code>OnlineStore</code> для керування інтернет-магазином через консоль:
+            Реалізувати клас <code>ShopDatabase</code> для взаємодії з базою даних з наступними методами:
           </p>
           <ul>
-            <li class="dot">Перегляд всіх товарів</li>
-            <li class="dot">Перегляд детальної інформації про товар</li>
-            <li class="dot">Перегляду товарів за категорією</li>
-            <li class="dot">Пошук товару за назвою</li>
-            <li class="dot">Додавання товарів до кошика</li>
-            <li class="dot">Оформлення замовлення</li>
+            <li class="dot"><code>get_all_products()</code> — отримати всі товари</li>
+            <li class="dot"><code>get_products_by_category(category_id)</code> — отримати товари певної категорії</li>
+            <li class="dot"><code>search_products(query)</code> — пошук товарів за назвою</li>
+            <li class="dot"><code>add_product(name, description, price, category_id)</code> — додати новий товар</li>
+            <li class="dot"><code>create_order(items)</code> — створити замовлення (items — список кортежів (product_id, quantity))</li>
+            <li class="dot"><code>get_order_details(order_id)</code> — отримати деталі замовлення</li>
           </ul>
+          <div class="alert alert-info mt-3">
+            <b>💡 Підказки:</b>
+            <ul class="mb-0 mt-2">
+              <li>У конструкторі <code>__init__</code> підключайтесь до бази даних</li>
+              <li>Для пошуку використовуйте <code>LIKE '%query%'</code></li>
+              <li>При створенні замовлення спочатку додайте запис в <code>orders</code>, потім у <code>order_items</code></li>
+              <li>Використовуйте <code>cursor.lastrowid</code> щоб отримати id щойно створеного запису</li>
+            </ul>
+          </div>
         </div>
       </div>
     </div>
@@ -215,11 +233,22 @@
       <div id="collapseFour" class="collapse" aria-labelledby="headingFour" data-parent="#accordionExample">
         <div class="card-body">
           <p>
-            Перевірити роботу всіх методів класів <code>DatabaseManager</code> та <code>OnlineStore</code> шляхом створення та взаємодії з об'єктами через консоль. 
+            Протестувати всі методи класу <code>ShopDatabase</code>:
           </p>
-          <p>
-            Тестувати додавання нових категорій, товарів, оформлення замовлень та додавання товарів до кошика.
-          </p>
+          <ul>
+            <li class="dot">Вивести всі товари</li>
+            <li class="dot">Знайти товари за ключовим словом</li>
+            <li class="dot">Додати новий товар та переконатись, що він з'явився в базі</li>
+            <li class="dot">Створити замовлення з кількома товарами</li>
+            <li class="dot">Переглянути деталі створеного замовлення</li>
+          </ul>
+          <div class="alert alert-info mt-3">
+            <b>💡 Підказка:</b> Створіть об'єкт класу та викличте методи по черзі:
+            <pre class="bg-dark text-light p-2 rounded mt-2 mb-0"><code>db = ShopDatabase("shop.db")
+print(db.get_all_products())
+print(db.search_products("телефон"))
+# ...</code></pre>
+          </div>
         </div>
       </div>
     </div>
