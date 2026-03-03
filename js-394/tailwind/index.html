@@ -1,0 +1,691 @@
+<!doctype html>
+<html lang="uk">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta property="og:title" content="Tailwind CSS — WebTeach">
+  <meta property="og:site_name" content="WebTeach">
+  <meta property="og:url" content="https://web-teach.pp.ua/js-394/tailwind/index.html">
+  <meta property="og:description" content="Вивчаємо Tailwind CSS — utility-first CSS фреймворк">
+  <meta property="og:image" content="https://web-teach.pp.ua/src/img/frontend_preview.png">
+  <!-- /Required meta tags -->
+  <title>Tailwind CSS — WebTeach</title>
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+    integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+  <link href="https://fonts.googleapis.com/css2?family=Ruda:wght@400;500;700;800;900&display=swap" rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,200;0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600&family=Ruda:wght@400;500;700;800;900&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="/src/python-course/css/style.css">
+  <link rel="SHORTCUT ICON" href="/favicon.ico" type="image/x-icon">
+  <link rel="stylesheet" href="/src/python-course/css/main.css">
+  <link rel="stylesheet" href="/src/python-course/css/animate.css">
+  <link rel="shortcut icon" href="/favicon.ico" />
+  <link rel="stylesheet" href="/src/js/highlight/styles/default.min.css">
+</head>
+
+<body class="body-js body-js-lesson">
+  <!-- Header-wrapper -->
+  <div class="header-wrapper header-wrapper-js">
+    <header class="page-header text-white page-header-js d-flex flex-column  container">
+      <!-- Navbar -->
+      <nav class="main-navbar navbar navbar-expand-lg navbar-dark wow fadeInDown">
+        <div class="container-xl">
+          <a class="navbar-brand logo" href="../"><span>Web</span>Teach</a>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup"
+            aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+            <div class="navbar-nav mr-auto mt-2 mt-lg-0">
+              <a class="nav-item nav-link active" href="../#course" title="Перейти до курсу">Курс<span
+                  class="sr-only">(current)</span></a>
+              <a class="nav-item nav-link active" href="https://uk.javascript.info/" data-toggle="tooltip"
+                data-placement="bottom" title="Довідник по JavaScript" target="_blank">Довідник</a>
+              <a class="nav-item nav-link active" href="../shpora/" data-toggle="tooltip" data-placement="bottom"
+                title="Шпаргалка по JavaScript">Шпаргалка</a>
+              <a class="nav-item nav-link active" href="https://codesandbox.io/s/" title="Відкрити онлайн-редактор коду"
+                target="_blank">Редактор</a>
+            </div>
+
+          </div>
+        </div>
+      </nav>
+      <!-- /Navbar -->
+
+      <!-- Page title -->
+      <div class="header-title-js my-3 wow backInDown container">
+
+        <h1 class="lesson-title-h1  wow fadeInUp ">
+           <span class="text-warning">Tailwind CSS.</span> Utility-first CSS фреймворк</h1>
+      </div>
+
+      <!-- Go-lesson Button -->
+      <a href="https://meet.google.com/ivb-skvd-rwx" target="_blank" id="lessonBtn"
+        class="go-lesson-btn  wow fadeInUp container" data-wow-delay=".5s" style="width: 300px;">
+        <div class="go-lesson-1 container pt-2 px-md-4">
+          <div class="row mt-2 d-flex justify-content-center justify-content-end align-items-center">
+            <h6 id="eventDate" class="d-flex justify-content-center justify-content-end align-items-center"><svg
+                xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                class="bi bi-calendar-check mr-1" viewBox="0 0 16 16">
+                <path
+                  d="M10.854 7.146a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708 0l-1.5-1.5a.5.5 0 1 1 .708-.708L7.5 9.793l2.646-2.647a.5.5 0 0 1 .708 0z" />
+                <path
+                  d="M3.5 0a.5.5 0 0 1 .5.5V1h8V.5a.5.5 0 0 1 1 0V1h1a2 2 0 0 1 2 2v11a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V3a2 2 0 0 1 2-2h1V.5a.5.5 0 0 1 .5-.5zM1 4v10a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V4H1z" />
+              </svg></h6>
+            <h6 id="eventTime" class="ml-3 d-flex justify-content-center justify-content-end align-items-center"><svg
+                xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-clock mr-1"
+                viewBox="0 0 16 16">
+                <path d="M8 3.5a.5.5 0 0 0-1 0V9a.5.5 0 0 0 .252.434l3.5 2a.5.5 0 0 0 .496-.868L8 8.71V3.5z" />
+                <path d="M8 16A8 8 0 1 0 8 0a8 8 0 0 0 0 16zm7-8A7 7 0 1 1 1 8a7 7 0 0 1 14 0z" />
+              </svg></h6>
+          </div>
+          <div class="row p-1 justify-content-center">
+            <h5 class="font-weight-bolder text-dark">Вивчаємо JS онлайн!</h5>
+          </div>
+        </div>
+        <div class="go-lesson-2 container btn btn-block text-uppercase ">
+          Онлайн-урок
+        </div>
+      </a>
+    </header>
+  </div>
+  <div class="main-wrapper container container-lg-fluid">
+    <!-- Main block -->
+    <main class="container pt-4">
+
+      <!-- #1 Інструкція: Як підключити Tailwind CSS -->
+      <div class="lesson-list-js wow fadeInUp" id="course">
+        <a class="collapse-heading " data-toggle="collapse" data-target="#collapseIntro" aria-expanded="true">
+          <h4 class="h4  font-weight-normal "><span class="font-weight-bold ">#1</span> Як підключити Tailwind CSS</h4>
+        </a>
+        <div id="collapseIntro" class="collapse show">
+          <div class="collapse-pres mt-4">
+            <div class="card-body">
+              <p><strong>Tailwind CSS</strong> — це utility-first CSS фреймворк, який дозволяє швидко створювати сучасні інтерфейси прямо в HTML за допомогою утилітарних класів.</p>
+
+              <h5 class="mt-4">Спосіб 1: CDN (для навчання та прототипів)</h5>
+              <p>Найпростіший спосіб — підключити через CDN у <code>&lt;head&gt;</code>:</p>
+              <pre><code class="language-html">&lt;!DOCTYPE html&gt;
+&lt;html lang="uk"&gt;
+&lt;head&gt;
+  &lt;meta charset="UTF-8"&gt;
+  &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+  &lt;title&gt;Tailwind CSS&lt;/title&gt;
+  &lt;script src="https://cdn.tailwindcss.com"&gt;&lt;/script&gt;
+&lt;/head&gt;
+&lt;body&gt;
+  &lt;h1 class="text-3xl font-bold text-blue-600"&gt;
+    Привіт, Tailwind!
+  &lt;/h1&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+
+              <h5 class="mt-4">Спосіб 2: Встановлення через npm (для проєктів)</h5>
+              <pre><code class="language-bash"># Ініціалізація проєкту
+npm init -y
+
+# Встановлення Tailwind CSS
+npm install -D tailwindcss
+
+# Створення конфігураційного файлу
+npx tailwindcss init</code></pre>
+
+              <p class="mt-3">Налаштуйте <code>tailwind.config.js</code>:</p>
+              <pre><code class="language-javascript">/** @type {import('tailwindcss').Config} */
+module.exports = {
+  content: ["./*.html", "./src/**/*.{html,js}"],
+  theme: {
+    extend: {},
+  },
+  plugins: [],
+}</code></pre>
+
+              <p class="mt-3">Створіть файл <code>src/input.css</code>:</p>
+              <pre><code class="language-css">@tailwind base;
+@tailwind components;
+@tailwind utilities;</code></pre>
+
+              <p class="mt-3">Запустіть збірку:</p>
+              <pre><code class="language-bash">npx tailwindcss -i ./src/input.css -o ./dist/output.css --watch</code></pre>
+
+              <p class="mt-3">Підключіть згенерований CSS у HTML:</p>
+              <pre><code class="language-html">&lt;link href="./dist/output.css" rel="stylesheet"&gt;</code></pre>
+
+              <h5 class="mt-4">Спосіб 3: Tailwind у React (Vite)</h5>
+              <pre><code class="language-bash">npm create vite@latest my-app -- --template react
+cd my-app
+npm install -D tailwindcss @tailwindcss/vite</code></pre>
+              <p class="mt-3">Додайте плагін у <code>vite.config.js</code>:</p>
+              <pre><code class="language-javascript">import tailwindcss from '@tailwindcss/vite'
+
+export default defineConfig({
+  plugins: [react(), tailwindcss()],
+})</code></pre>
+              <p class="mt-3">Додайте у <code>src/index.css</code>:</p>
+              <pre><code class="language-css">@import "tailwindcss";</code></pre>
+            </div>
+          </div>
+          <a class="btn btn-lg ok-btn mt-3 mx-2" href="https://tailwindcss.com/docs/installation" target="_blank">
+           Документація Tailwind CSS</a>
+           <a class="btn btn-lg ok-btn mt-3 mx-2" href="https://play.tailwindcss.com/" target="_blank">
+           Tailwind Play (онлайн-пісочниця)</a>
+        </div>
+      </div>
+
+      <!-- #2 Шпаргалка з основними класами -->
+      <div class="lesson-list-js wow fadeInUp" id="course">
+        <a class="collapse-heading " data-toggle="collapse" data-target="#collapseCheatsheet" aria-expanded="false">
+          <h4 class="h4 font-weight-normal "><span class="font-weight-bold ">#2</span> Шпаргалка: основні класи Tailwind CSS</h4>
+        </a>
+
+        <div id='collapseCheatsheet' class="collapse show">
+          <div class="accordion" id="accordionCheatsheet">
+
+            <!-- Кольори та текст -->
+            <div class="card">
+              <div class="card-header" id="headingColors">
+                <h2 class="mb-0">
+                  <button class="btn btn-link btn-block text-left" type="button" data-toggle="collapse" data-target="#collapseColors" aria-expanded="true" aria-controls="collapseColors">
+                    <h5>🎨 Кольори та текст</h5>
+                  </button>
+                </h2>
+              </div>
+              <div id="collapseColors" class="collapse show" aria-labelledby="headingColors" data-parent="#accordionCheatsheet">
+                <div class="card-body">
+                  <table class="table table-bordered table-sm">
+                    <thead class="thead-dark"><tr><th>Клас</th><th>Опис</th><th>CSS-еквівалент</th></tr></thead>
+                    <tbody>
+                      <tr><td><code>text-red-500</code></td><td>Червоний текст</td><td><code>color: #ef4444</code></td></tr>
+                      <tr><td><code>text-blue-600</code></td><td>Синій текст</td><td><code>color: #2563eb</code></td></tr>
+                      <tr><td><code>text-green-500</code></td><td>Зелений текст</td><td><code>color: #22c55e</code></td></tr>
+                      <tr><td><code>text-gray-700</code></td><td>Сірий текст</td><td><code>color: #374151</code></td></tr>
+                      <tr><td><code>text-white</code></td><td>Білий текст</td><td><code>color: #fff</code></td></tr>
+                      <tr><td><code>bg-blue-500</code></td><td>Синій фон</td><td><code>background-color: #3b82f6</code></td></tr>
+                      <tr><td><code>bg-gray-100</code></td><td>Світло-сірий фон</td><td><code>background-color: #f3f4f6</code></td></tr>
+                      <tr><td><code>bg-gradient-to-r</code></td><td>Градієнт вправо</td><td><code>background-image: linear-gradient(to right, ...)</code></td></tr>
+                    </tbody>
+                  </table>
+                  <p><strong>Шкала кольорів:</strong> від <code>50</code> (світлий) до <code>950</code> (темний).<br>
+                  Приклад: <code>blue-50</code>, <code>blue-100</code>, ..., <code>blue-500</code>, ..., <code>blue-900</code></p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Типографія -->
+            <div class="card">
+              <div class="card-header" id="headingTypo">
+                <h2 class="mb-0">
+                  <button class="btn btn-link btn-block text-left" type="button" data-toggle="collapse" data-target="#collapseTypo" aria-expanded="false" aria-controls="collapseTypo">
+                    <h5>✏️ Типографія</h5>
+                  </button>
+                </h2>
+              </div>
+              <div id="collapseTypo" class="collapse" aria-labelledby="headingTypo" data-parent="#accordionCheatsheet">
+                <div class="card-body">
+                  <table class="table table-bordered table-sm">
+                    <thead class="thead-dark"><tr><th>Клас</th><th>Опис</th><th>CSS-еквівалент</th></tr></thead>
+                    <tbody>
+                      <tr><td><code>text-sm</code></td><td>Маленький текст</td><td><code>font-size: 0.875rem</code></td></tr>
+                      <tr><td><code>text-base</code></td><td>Звичайний текст</td><td><code>font-size: 1rem</code></td></tr>
+                      <tr><td><code>text-lg</code></td><td>Великий текст</td><td><code>font-size: 1.125rem</code></td></tr>
+                      <tr><td><code>text-xl</code></td><td>Дуже великий</td><td><code>font-size: 1.25rem</code></td></tr>
+                      <tr><td><code>text-2xl</code> ... <code>text-9xl</code></td><td>Ще більший</td><td><code>font-size: 1.5rem+</code></td></tr>
+                      <tr><td><code>font-bold</code></td><td>Жирний</td><td><code>font-weight: 700</code></td></tr>
+                      <tr><td><code>font-semibold</code></td><td>Напівжирний</td><td><code>font-weight: 600</code></td></tr>
+                      <tr><td><code>font-light</code></td><td>Тонкий</td><td><code>font-weight: 300</code></td></tr>
+                      <tr><td><code>italic</code></td><td>Курсив</td><td><code>font-style: italic</code></td></tr>
+                      <tr><td><code>uppercase</code></td><td>Верхній регістр</td><td><code>text-transform: uppercase</code></td></tr>
+                      <tr><td><code>text-center</code></td><td>Центрування</td><td><code>text-align: center</code></td></tr>
+                      <tr><td><code>leading-relaxed</code></td><td>Розріджений рядок</td><td><code>line-height: 1.625</code></td></tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+
+            <!-- Відступи -->
+            <div class="card">
+              <div class="card-header" id="headingSpacing">
+                <h2 class="mb-0">
+                  <button class="btn btn-link btn-block text-left" type="button" data-toggle="collapse" data-target="#collapseSpacing" aria-expanded="false" aria-controls="collapseSpacing">
+                    <h5>📏 Відступи (Spacing)</h5>
+                  </button>
+                </h2>
+              </div>
+              <div id="collapseSpacing" class="collapse" aria-labelledby="headingSpacing" data-parent="#accordionCheatsheet">
+                <div class="card-body">
+                  <table class="table table-bordered table-sm">
+                    <thead class="thead-dark"><tr><th>Клас</th><th>Опис</th><th>CSS-еквівалент</th></tr></thead>
+                    <tbody>
+                      <tr><td><code>p-4</code></td><td>Padding з усіх сторін</td><td><code>padding: 1rem</code></td></tr>
+                      <tr><td><code>px-4</code></td><td>Padding зліва та справа</td><td><code>padding-left: 1rem; padding-right: 1rem</code></td></tr>
+                      <tr><td><code>py-2</code></td><td>Padding зверху та знизу</td><td><code>padding-top: 0.5rem; padding-bottom: 0.5rem</code></td></tr>
+                      <tr><td><code>pt-6</code></td><td>Padding зверху</td><td><code>padding-top: 1.5rem</code></td></tr>
+                      <tr><td><code>m-4</code></td><td>Margin з усіх сторін</td><td><code>margin: 1rem</code></td></tr>
+                      <tr><td><code>mx-auto</code></td><td>Центрування по горизонталі</td><td><code>margin-left: auto; margin-right: auto</code></td></tr>
+                      <tr><td><code>mb-8</code></td><td>Margin знизу</td><td><code>margin-bottom: 2rem</code></td></tr>
+                      <tr><td><code>space-x-4</code></td><td>Горизонтальний проміжок між дітьми</td><td><code>margin-left: 1rem</code> (кожному, крім першого)</td></tr>
+                    </tbody>
+                  </table>
+                  <p><strong>Шкала:</strong> <code>0</code> = 0px, <code>1</code> = 0.25rem, <code>2</code> = 0.5rem, <code>4</code> = 1rem, <code>8</code> = 2rem, <code>16</code> = 4rem, <code>32</code> = 8rem</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Flexbox -->
+            <div class="card">
+              <div class="card-header" id="headingFlex">
+                <h2 class="mb-0">
+                  <button class="btn btn-link btn-block text-left" type="button" data-toggle="collapse" data-target="#collapseFlex" aria-expanded="false" aria-controls="collapseFlex">
+                    <h5>📦 Flexbox</h5>
+                  </button>
+                </h2>
+              </div>
+              <div id="collapseFlex" class="collapse" aria-labelledby="headingFlex" data-parent="#accordionCheatsheet">
+                <div class="card-body">
+                  <table class="table table-bordered table-sm">
+                    <thead class="thead-dark"><tr><th>Клас</th><th>Опис</th><th>CSS-еквівалент</th></tr></thead>
+                    <tbody>
+                      <tr><td><code>flex</code></td><td>Flexbox контейнер</td><td><code>display: flex</code></td></tr>
+                      <tr><td><code>flex-col</code></td><td>Вертикальний напрямок</td><td><code>flex-direction: column</code></td></tr>
+                      <tr><td><code>flex-row</code></td><td>Горизонтальний напрямок</td><td><code>flex-direction: row</code></td></tr>
+                      <tr><td><code>flex-wrap</code></td><td>Перенесення</td><td><code>flex-wrap: wrap</code></td></tr>
+                      <tr><td><code>items-center</code></td><td>Вирівнювання по вертикалі</td><td><code>align-items: center</code></td></tr>
+                      <tr><td><code>justify-center</code></td><td>Вирівнювання по горизонталі</td><td><code>justify-content: center</code></td></tr>
+                      <tr><td><code>justify-between</code></td><td>Розподіл з проміжками</td><td><code>justify-content: space-between</code></td></tr>
+                      <tr><td><code>gap-4</code></td><td>Проміжок між елементами</td><td><code>gap: 1rem</code></td></tr>
+                      <tr><td><code>flex-1</code></td><td>Займає весь вільний простір</td><td><code>flex: 1 1 0%</code></td></tr>
+                    </tbody>
+                  </table>
+                  <pre><code class="language-html">&lt;!-- Приклад: навігаційне меню --&gt;
+&lt;nav class="flex items-center justify-between p-4 bg-gray-800"&gt;
+  &lt;a href="#" class="text-white text-xl font-bold"&gt;Логотип&lt;/a&gt;
+  &lt;div class="flex gap-6"&gt;
+    &lt;a href="#" class="text-gray-300 hover:text-white"&gt;Головна&lt;/a&gt;
+    &lt;a href="#" class="text-gray-300 hover:text-white"&gt;Про нас&lt;/a&gt;
+    &lt;a href="#" class="text-gray-300 hover:text-white"&gt;Контакти&lt;/a&gt;
+  &lt;/div&gt;
+&lt;/nav&gt;</code></pre>
+                </div>
+              </div>
+            </div>
+
+            <!-- Grid -->
+            <div class="card">
+              <div class="card-header" id="headingGrid">
+                <h2 class="mb-0">
+                  <button class="btn btn-link btn-block text-left" type="button" data-toggle="collapse" data-target="#collapseGrid" aria-expanded="false" aria-controls="collapseGrid">
+                    <h5>🔲 Grid</h5>
+                  </button>
+                </h2>
+              </div>
+              <div id="collapseGrid" class="collapse" aria-labelledby="headingGrid" data-parent="#accordionCheatsheet">
+                <div class="card-body">
+                  <table class="table table-bordered table-sm">
+                    <thead class="thead-dark"><tr><th>Клас</th><th>Опис</th><th>CSS-еквівалент</th></tr></thead>
+                    <tbody>
+                      <tr><td><code>grid</code></td><td>Grid контейнер</td><td><code>display: grid</code></td></tr>
+                      <tr><td><code>grid-cols-3</code></td><td>3 колонки</td><td><code>grid-template-columns: repeat(3, 1fr)</code></td></tr>
+                      <tr><td><code>grid-cols-2</code></td><td>2 колонки</td><td><code>grid-template-columns: repeat(2, 1fr)</code></td></tr>
+                      <tr><td><code>col-span-2</code></td><td>Займає 2 колонки</td><td><code>grid-column: span 2</code></td></tr>
+                      <tr><td><code>gap-4</code></td><td>Проміжок між елементами</td><td><code>gap: 1rem</code></td></tr>
+                    </tbody>
+                  </table>
+                  <pre><code class="language-html">&lt;!-- Приклад: сітка карток --&gt;
+&lt;div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 p-8"&gt;
+  &lt;div class="bg-white rounded-lg shadow-md p-6"&gt;Картка 1&lt;/div&gt;
+  &lt;div class="bg-white rounded-lg shadow-md p-6"&gt;Картка 2&lt;/div&gt;
+  &lt;div class="bg-white rounded-lg shadow-md p-6"&gt;Картка 3&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+                </div>
+              </div>
+            </div>
+
+            <!-- Розміри та рамки -->
+            <div class="card">
+              <div class="card-header" id="headingSizing">
+                <h2 class="mb-0">
+                  <button class="btn btn-link btn-block text-left" type="button" data-toggle="collapse" data-target="#collapseSizing" aria-expanded="false" aria-controls="collapseSizing">
+                    <h5>📐 Розміри, рамки та тіні</h5>
+                  </button>
+                </h2>
+              </div>
+              <div id="collapseSizing" class="collapse" aria-labelledby="headingSizing" data-parent="#accordionCheatsheet">
+                <div class="card-body">
+                  <table class="table table-bordered table-sm">
+                    <thead class="thead-dark"><tr><th>Клас</th><th>Опис</th><th>CSS-еквівалент</th></tr></thead>
+                    <tbody>
+                      <tr><td><code>w-full</code></td><td>Ширина 100%</td><td><code>width: 100%</code></td></tr>
+                      <tr><td><code>w-1/2</code></td><td>Ширина 50%</td><td><code>width: 50%</code></td></tr>
+                      <tr><td><code>h-screen</code></td><td>Висота екрану</td><td><code>height: 100vh</code></td></tr>
+                      <tr><td><code>max-w-lg</code></td><td>Максимальна ширина</td><td><code>max-width: 32rem</code></td></tr>
+                      <tr><td><code>rounded</code></td><td>Заокруглення</td><td><code>border-radius: 0.25rem</code></td></tr>
+                      <tr><td><code>rounded-lg</code></td><td>Більше заокруглення</td><td><code>border-radius: 0.5rem</code></td></tr>
+                      <tr><td><code>rounded-full</code></td><td>Повне заокруглення (коло)</td><td><code>border-radius: 9999px</code></td></tr>
+                      <tr><td><code>border</code></td><td>Рамка 1px</td><td><code>border-width: 1px</code></td></tr>
+                      <tr><td><code>border-2</code></td><td>Рамка 2px</td><td><code>border-width: 2px</code></td></tr>
+                      <tr><td><code>border-gray-300</code></td><td>Колір рамки</td><td><code>border-color: #d1d5db</code></td></tr>
+                      <tr><td><code>shadow-md</code></td><td>Середня тінь</td><td><code>box-shadow: ...</code></td></tr>
+                      <tr><td><code>shadow-lg</code></td><td>Велика тінь</td><td><code>box-shadow: ...</code></td></tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+
+            <!-- Респонсивність та стани -->
+            <div class="card">
+              <div class="card-header" id="headingResponsive">
+                <h2 class="mb-0">
+                  <button class="btn btn-link btn-block text-left" type="button" data-toggle="collapse" data-target="#collapseResponsive" aria-expanded="false" aria-controls="collapseResponsive">
+                    <h5>📱 Респонсивність та стани</h5>
+                  </button>
+                </h2>
+              </div>
+              <div id="collapseResponsive" class="collapse" aria-labelledby="headingResponsive" data-parent="#accordionCheatsheet">
+                <div class="card-body">
+                  <h6><strong>Брейкпоінти (Mobile First):</strong></h6>
+                  <table class="table table-bordered table-sm">
+                    <thead class="thead-dark"><tr><th>Префікс</th><th>Мін. ширина</th><th>Опис</th></tr></thead>
+                    <tbody>
+                      <tr><td><code>sm:</code></td><td>640px</td><td>Маленький екран</td></tr>
+                      <tr><td><code>md:</code></td><td>768px</td><td>Середній екран (планшет)</td></tr>
+                      <tr><td><code>lg:</code></td><td>1024px</td><td>Великий екран (ноутбук)</td></tr>
+                      <tr><td><code>xl:</code></td><td>1280px</td><td>Дуже великий екран</td></tr>
+                      <tr><td><code>2xl:</code></td><td>1536px</td><td>Найбільший екран</td></tr>
+                    </tbody>
+                  </table>
+
+                  <h6 class="mt-3"><strong>Стани (States):</strong></h6>
+                  <table class="table table-bordered table-sm">
+                    <thead class="thead-dark"><tr><th>Префікс</th><th>Опис</th><th>Приклад</th></tr></thead>
+                    <tbody>
+                      <tr><td><code>hover:</code></td><td>При наведенні</td><td><code>hover:bg-blue-700</code></td></tr>
+                      <tr><td><code>focus:</code></td><td>При фокусі</td><td><code>focus:outline-none</code></td></tr>
+                      <tr><td><code>active:</code></td><td>При натисканні</td><td><code>active:bg-blue-800</code></td></tr>
+                      <tr><td><code>disabled:</code></td><td>Коли вимкнено</td><td><code>disabled:opacity-50</code></td></tr>
+                      <tr><td><code>dark:</code></td><td>Темна тема</td><td><code>dark:bg-gray-900</code></td></tr>
+                    </tbody>
+                  </table>
+
+                  <pre><code class="language-html">&lt;!-- Приклад: адаптивна кнопка зі станами --&gt;
+&lt;button class="bg-blue-500 hover:bg-blue-700 active:bg-blue-800
+  text-white font-bold py-2 px-4 rounded
+  text-sm md:text-base lg:text-lg
+  transition duration-200"&gt;
+  Натисни мене
+&lt;/button&gt;</code></pre>
+                </div>
+              </div>
+            </div>
+
+            <!-- Анімації та переходи -->
+            <div class="card">
+              <div class="card-header" id="headingAnimations">
+                <h2 class="mb-0">
+                  <button class="btn btn-link btn-block text-left" type="button" data-toggle="collapse" data-target="#collapseAnimations" aria-expanded="false" aria-controls="collapseAnimations">
+                    <h5>✨ Анімації та переходи</h5>
+                  </button>
+                </h2>
+              </div>
+              <div id="collapseAnimations" class="collapse" aria-labelledby="headingAnimations" data-parent="#accordionCheatsheet">
+                <div class="card-body">
+                  <table class="table table-bordered table-sm">
+                    <thead class="thead-dark"><tr><th>Клас</th><th>Опис</th></tr></thead>
+                    <tbody>
+                      <tr><td><code>transition</code></td><td>Плавний перехід (усі властивості)</td></tr>
+                      <tr><td><code>transition-colors</code></td><td>Перехід лише кольорів</td></tr>
+                      <tr><td><code>duration-200</code></td><td>Тривалість 200мс</td></tr>
+                      <tr><td><code>duration-500</code></td><td>Тривалість 500мс</td></tr>
+                      <tr><td><code>ease-in-out</code></td><td>Плавне прискорення/уповільнення</td></tr>
+                      <tr><td><code>hover:scale-105</code></td><td>Збільшення при наведенні</td></tr>
+                      <tr><td><code>hover:-translate-y-1</code></td><td>Підняття при наведенні</td></tr>
+                      <tr><td><code>animate-spin</code></td><td>Обертання</td></tr>
+                      <tr><td><code>animate-bounce</code></td><td>Підстрибування</td></tr>
+                      <tr><td><code>animate-pulse</code></td><td>Пульсація</td></tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+
+      <!-- #3 Практичні завдання -->
+      <div class="lesson-list-js wow fadeInUp" id="course">
+        <a class="collapse-heading " data-toggle="collapse" data-target="#collapseTasks" aria-expanded="false">
+          <h4 class="h4 font-weight-normal "><span class="font-weight-bold ">#3</span> Практичні завдання</h4>
+        </a>
+
+        <div id='collapseTasks' class="collapse show">
+          <div class="accordion" id="accordionTasks">
+
+            <!-- Завдання 1 -->
+            <div class="card">
+              <div class="card-header" id="headingTask1">
+                <h2 class="mb-0">
+                  <button class="btn btn-link btn-block text-left" type="button" data-toggle="collapse" data-target="#collapseTask1" aria-expanded="true" aria-controls="collapseTask1">
+                    <h5>Завдання 1: Картка профілю</h5>
+                  </button>
+                </h2>
+              </div>
+              <div id="collapseTask1" class="collapse show" aria-labelledby="headingTask1" data-parent="#accordionTasks">
+                <div class="card-body">
+                  <p><strong>Мета:</strong> Створити картку профілю користувача з використанням Tailwind CSS.</p>
+
+                  <h6 class="mt-3"><strong>Вимоги:</strong></h6>
+                  <ol class="ps-5">
+                    <li class="dot">Створіть HTML-файл із підключенням Tailwind через CDN</li>
+                    <li class="dot">Картка повинна бути по центру екрану</li>
+                    <li class="dot">Аватар (зображення) з круглим обрізанням (<code>rounded-full</code>)</li>
+                    <li class="dot">Ім'я користувача (<code>text-xl font-bold</code>)</li>
+                    <li class="dot">Опис (<code>text-gray-600</code>)</li>
+                    <li class="dot">Кнопка "Підписатись" з ефектом <code>hover</code></li>
+                    <li class="dot">Тінь картки (<code>shadow-lg</code>)</li>
+                  </ol>
+
+                  <h6 class="mt-3"><strong>Приклад коду:</strong></h6>
+                  <pre><code class="language-html">&lt;div class="min-h-screen flex items-center justify-center bg-gray-100"&gt;
+  &lt;div class="bg-white rounded-2xl shadow-lg p-8 max-w-sm text-center"&gt;
+    &lt;img
+      src="https://i.pravatar.cc/150"
+      alt="Аватар"
+      class="w-24 h-24 rounded-full mx-auto mb-4"
+    /&gt;
+    &lt;h2 class="text-xl font-bold text-gray-800"&gt;Олександр Коваль&lt;/h2&gt;
+    &lt;p class="text-gray-500 mt-2"&gt;Frontend-розробник | React &amp; Tailwind&lt;/p&gt;
+    &lt;button class="mt-6 bg-blue-500 hover:bg-blue-700 text-white
+      font-bold py-2 px-6 rounded-full transition duration-200"&gt;
+      Підписатись
+    &lt;/button&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+                </div>
+              </div>
+            </div>
+
+            <!-- Завдання 2 -->
+            <div class="card">
+              <div class="card-header" id="headingTask2">
+                <h2 class="mb-0">
+                  <button class="btn btn-link btn-block text-left" type="button" data-toggle="collapse" data-target="#collapseTask2" aria-expanded="false" aria-controls="collapseTask2">
+                    <h5>Завдання 2: Адаптивна сітка карток</h5>
+                  </button>
+                </h2>
+              </div>
+              <div id="collapseTask2" class="collapse" aria-labelledby="headingTask2" data-parent="#accordionTasks">
+                <div class="card-body">
+                  <p><strong>Мета:</strong> Створити адаптивну сітку з картками товарів.</p>
+
+                  <h6 class="mt-3"><strong>Вимоги:</strong></h6>
+                  <ol class="ps-5">
+                    <li class="dot">Мобільний: 1 колонка</li>
+                    <li class="dot">Планшет (md): 2 колонки</li>
+                    <li class="dot">Десктоп (lg): 3 колонки</li>
+                    <li class="dot">Кожна картка містить: зображення, назву, ціну, кнопку "Купити"</li>
+                    <li class="dot">Ефект підняття картки при наведенні (<code>hover:-translate-y-2</code>)</li>
+                    <li class="dot">Плавні переходи (<code>transition duration-300</code>)</li>
+                  </ol>
+
+                  <h6 class="mt-3"><strong>Шаблон:</strong></h6>
+                  <pre><code class="language-html">&lt;div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 p-8"&gt;
+
+  &lt;!-- Картка товару --&gt;
+  &lt;div class="bg-white rounded-xl shadow-md overflow-hidden
+    hover:-translate-y-2 hover:shadow-xl transition duration-300"&gt;
+    &lt;img src="https://picsum.photos/400/250" alt="Товар"
+      class="w-full h-48 object-cover"&gt;
+    &lt;div class="p-6"&gt;
+      &lt;h3 class="text-lg font-semibold text-gray-800"&gt;Назва товару&lt;/h3&gt;
+      &lt;p class="text-gray-500 mt-2"&gt;Короткий опис товару&lt;/p&gt;
+      &lt;div class="flex items-center justify-between mt-4"&gt;
+        &lt;span class="text-2xl font-bold text-green-600"&gt;₴ 999&lt;/span&gt;
+        &lt;button class="bg-green-500 hover:bg-green-700 text-white
+          font-bold py-2 px-4 rounded-lg transition duration-200"&gt;
+          Купити
+        &lt;/button&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+
+  &lt;!-- Повторіть картки для кожного товару --&gt;
+&lt;/div&gt;</code></pre>
+                </div>
+              </div>
+            </div>
+
+            <!-- Завдання 3 -->
+            <div class="card">
+              <div class="card-header" id="headingTask3">
+                <h2 class="mb-0">
+                  <button class="btn btn-link btn-block text-left" type="button" data-toggle="collapse" data-target="#collapseTask3" aria-expanded="false" aria-controls="collapseTask3">
+                    <h5>Завдання 3: Лендінг-сторінка</h5>
+                  </button>
+                </h2>
+              </div>
+              <div id="collapseTask3" class="collapse" aria-labelledby="headingTask3" data-parent="#accordionTasks">
+                <div class="card-body">
+                  <p><strong>Мета:</strong> Створити повноцінну лендінг-сторінку для вигаданого продукту.</p>
+
+                  <h6 class="mt-3"><strong>Структура сторінки:</strong></h6>
+                  <ol class="ps-5">
+                    <li class="dot"><strong>Навбар</strong> — логотип + навігація (<code>flex justify-between</code>)</li>
+                    <li class="dot"><strong>Hero-секція</strong> — заголовок, підзаголовок, CTA-кнопка, фонове зображення або градієнт (<code>bg-gradient-to-r from-blue-500 to-purple-600</code>)</li>
+                    <li class="dot"><strong>Секція "Переваги"</strong> — 3 картки в ряд із іконками (<code>grid grid-cols-1 md:grid-cols-3</code>)</li>
+                    <li class="dot"><strong>Футер</strong> — копірайт, посилання</li>
+                  </ol>
+
+                  <h6 class="mt-3"><strong>Приклад Hero-секції:</strong></h6>
+                  <pre><code class="language-html">&lt;section class="bg-gradient-to-r from-blue-600 to-purple-700
+  text-white py-20 px-8"&gt;
+  &lt;div class="max-w-4xl mx-auto text-center"&gt;
+    &lt;h1 class="text-4xl md:text-6xl font-bold mb-6"&gt;
+      Створюй швидше з Tailwind
+    &lt;/h1&gt;
+    &lt;p class="text-xl md:text-2xl text-blue-100 mb-8"&gt;
+      Utility-first CSS фреймворк для сучасної веб-розробки
+    &lt;/p&gt;
+    &lt;a href="#" class="bg-white text-blue-600 font-bold py-3 px-8
+      rounded-full text-lg hover:bg-blue-50
+      transition duration-300 inline-block"&gt;
+      Почати безкоштовно
+    &lt;/a&gt;
+  &lt;/div&gt;
+&lt;/section&gt;</code></pre>
+
+                  <h6 class="mt-3"><strong>Додаткові вимоги:</strong></h6>
+                  <ul>
+                    <li class="dot">Сторінка повинна бути повністю адаптивною</li>
+                    <li class="dot">Використовуйте <code>hover</code> ефекти для всіх інтерактивних елементів</li>
+                    <li class="dot">Додайте плавні переходи (<code>transition</code>)</li>
+                    <li class="dot">Створіть мінімум 6 унікальних карток, кнопок або секцій</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+          </div>
+
+          <a class="btn btn-lg ok-btn mt-3 mx-2" href="https://tailwindcss.com/docs" target="_blank">
+            Документація Tailwind CSS</a>
+          <a class="btn btn-lg ok-btn mt-3 mx-2" href="https://tailwindui.com/components" target="_blank">
+            Tailwind UI Components</a>
+        </div>
+      </div>
+
+    </main>
+    <!-- Nav buttons -->
+    <div class="page-nav-btn-wrapper">
+      <a href="../react/react-router/" class="page-nav-left" title="React Router">
+        <span>
+          <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi bi-chevron-left" viewBox="0 0 16 16">
+            <path fill-rule="evenodd"
+              d="M11.354 1.646a.5.5 0 0 1 0 .708L5.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0z" />
+          </svg>
+        </span>
+        <span class="text-btn-nav">Попередня тема</span>
+      </a>
+    </div>
+
+    <!-- /Nav buttons -->
+  </div>
+  <button class="btn" hidden id='arrowTopBtn' onclick="window.scrollTo(0, 0);"></button>
+
+  <footer class="footer  mt-auto py-3 wow slideInUp">
+    <div class="container">
+      <div class="d-flex flex-column align-items-center">
+        <div class="footer-nav d-flex flex-column flex-md-row align-items-center justify-content-md-start">
+          <a class="mr-lg-5  navbar-brand mr-0 logo order-md-0 order-12" href="#"><span>Web</span><span
+              class="text-dark">Teach</span></a>
+          <a class="ml-lg-5 nav-item nav-link " href="../#course" title="Перейти до курсу">Курс<span
+              class="sr-only">(current)</span></a>
+
+          <a class="nav-item nav-link" href="https://codesandbox.io/s/" title="Відкрити онлайн-редактор коду"
+            target="_blank">Редактор</a>
+          <a class="nav-item nav-link" href="https://roadmap.sh/frontend?r=frontend-beginner" data-toggle="tooltip"
+            data-placement="bottom" title="Дорожня карта фронтенд-розробника" target="_blank">Roadmap</a>
+          <a class="nav-item nav-link " href="https://uk.javascript.info/" data-toggle="tooltip" data-placement="bottom"
+            title="Довідник по JavaScript" target="_blank">Довідник</a>
+          <a class="nav-item nav-link " href="../shpora/" data-toggle="tooltip" data-placement="bottom"
+            title="Шпаргалка по JavaScript" target="_blank">Шпаргалка</a>
+
+        </div>
+
+        <div class="d-inline-flex flex-column align-items-center">
+          <span class="muted mr-1">2020-2026 © WebTeach. </span>
+          <span class="muted text-center">Всі права застережено.</span>
+        </div>
+      </div>
+    </div>
+    </div>
+    </div>
+  </footer>
+
+  <script src="https://code.jquery.com/jquery-3.5.1.min.js"
+    integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+    integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
+    integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
+    crossorigin="anonymous"></script>
+  <script src="/src/js/highlight/highlight.min.js"></script>
+
+  <script>hljs.highlightAll();</script>
+
+  <script src="/src/js/wow.min.js"></script>
+  <script src="/src/js/js_course.js"></script>
+  <script>
+    fetchEvents("Фронтенд - Саша");
+  </script>
+
+</body>
+
+</html>
