@@ -1,0 +1,809 @@
+<!doctype html>
+<html lang="uk">
+
+<head>
+ <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta property="og:title" content="Курс Python онлайн - WebTeach">
+    <meta property="og:site_name" content="WebTeach">
+    <meta property="og:url" content="https://web-teach.pp.ua/py-denys/">
+    <meta property="og:description" content="Вивчаємо мову програмування Python онлайн!">
+    <meta property="og:image" content="https://web-teach.pp.ua/src/python-course/python-page-preview.jpg">
+    <!-- /Required meta tags -->
+  <title> Курс Python онлайн - WebTeach </title>
+  <!-- Bootstrap CSS -->
+
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+    integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+  <link href="https://fonts.googleapis.com/css2?family=Ruda:wght@400;500;700;800;900&display=swap" rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,200;0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600&family=Ruda:wght@400;500;700;800;900&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="/src/python-course/css/style.css">
+  <link rel="SHORTCUT ICON" href="/favicon.ico" type="image/x-icon">
+  <link rel="stylesheet" href="/src/python-course/css/main.css">
+  <link rel="stylesheet" href="/src/python-course/css/animate.css">
+</head>
+
+<body class="body-js body-js-lesson">
+  <!-- Header-wrapper -->
+  <div class="header-wrapper ">
+    <header class="page-header text-white page-header-js d-flex flex-column  container">
+      <!-- Navbar -->
+      <nav class="main-navbar navbar navbar-expand-lg navbar-dark wow fadeInDown">
+        <div class="container-xl">
+          <a class="navbar-brand logo" href="../"><span>Web</span>Teach</a>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup"
+            aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+            <div class="navbar-nav mr-auto mt-2 mt-lg-0">
+              <a class="nav-item nav-link active" href="../#course" onclick="slowScroll('#course')"
+                title="Перейти до курсу Python">Курс<span class="sr-only">(current)</span></a>
+                
+              
+                <a class="nav-item nav-link active" href="https://repl.it/languages/python3" title="Відкрити онлайн-редактор коду" target="_blank">Редактор</a>
+              
+             
+
+            </div>
+           
+          </div>
+        </div>
+      </nav>
+      <!-- /Navbar -->
+
+      <!-- Page title -->
+      <div class="header-title-js my-3 wow backInDown container">
+
+        <h1 class="lesson-title-h1  wow fadeInUp "> <span class="text-warning">Тема 16.</span class="text-warning">
+          Flask. Шаблони та фреймворк Bootstrap.</h1>
+      </div>
+
+      <!-- Go-lesson Button -->
+      <a href="https://meet.google.com/zoz-zozt-hbz" target="_blank" id="lessonBtn"
+        class="go-lesson-btn  wow fadeInUp container" data-wow-delay=".5s" style="width: 300px;">
+        <div class="go-lesson-1 pt-2 px-4">
+         
+          <div class="row p-1 justify-content-center">
+            <h5 class="font-weight-bolder text-dark">Вивчаємо Python!</h5>
+          </div>
+        </div>
+        <div class="go-lesson-2  btn btn-block text-uppercase ">
+          відкрити онлайн-урок
+        </div>
+      </a>
+    </header>
+  </div>
+  <!--/Header-wrapper -->
+  <div class="main-wrapper container container-lg-fluid">
+  <!-- Main block -->
+  <main class="container pt-4">
+   <!-- Робота з БД -->
+   <div class="lesson-list-js wow fadeInUp" id="course">
+    <a class="collapse-heading show" data-toggle="collapse" data-target="#collapseTasks" aria-expanded="true">
+      <h4 class="h4 font-weight-normal " ><span class="font-weight-bold ">#1</span>Фреймворк Bootstrap</h4>
+    </a>
+
+    <div id='collapseTasks' class="collapse show">
+      <div class="collapse-pres my-4">
+        <div class="embed-responsive embed-responsive-16by9">
+          <iframe class="embed-responsive-item "
+            src="https://docs.google.com/presentation/d/e/2PACX-1vSLNS0d29Q1cIxSwA6ie_qa1xqqXCsI9-dLAeBZRS101vHknI_toHd-UD3sjRl7CmbM2nWsC6sEj-z9/embed?start=false&loop=false&delayms=60000"
+            frameborder="0" width="100%" height="569" allowfullscreen="true" mozallowfullscreen="true"
+            webkitallowfullscreen="true">
+          </iframe> 
+        </div>
+        <!-- <a class="btn btn-lg ok-btn mt-3" href="https://github.com/webteacher/shop-site" target="_blank" style="background: linear-gradient(#752fc5, #677ff7);"> 
+          КОД З УРОКУ</a> -->
+          <a class="btn btn-lg ok-btn mt-3 mx-2" href="https://getbootstrap.com/docs/5.3/getting-started/introduction/" target="_blank" > 
+            Документація Bootstrap</a>
+          
+      </div>
+    </div>
+  </div>
+
+   <!-- Робота з БД -->
+   <div class="lesson-list-js wow fadeInUp" id="course">
+    <a class="collapse-heading show" data-toggle="collapse" data-target="#collapseTasks2" aria-expanded="true">
+      <h4 class="h4 font-weight-normal " ><span class="font-weight-bold ">#2</span> Шаблони</h4>
+    </a>
+
+    <div id='collapseTasks2' class="collapse show">
+      <div class="collapse-pres my-4">
+        <div class="embed-responsive embed-responsive-16by9">
+          <iframe class="embed-responsive-item "
+            src="https://docs.google.com/presentation/d/e/2PACX-1vQTbdQMqk24biSy8X8ow-J4crlCNkrzUTmq5S0n9zB2aQABF_T-kTn11Tg-vbkPD5OFBrE28jRz-Q9T/embed?start=false&loop=true&delayms=30000"
+            frameborder="0" width="100%" height="569" allowfullscreen="true" mozallowfullscreen="true"
+            webkitallowfullscreen="true">
+          </iframe> 
+        </div>
+        <a class="btn btn-lg ok-btn mt-3" href="https://flask.palletsprojects.com/en/3.0.x/" target="_blank" style="background: linear-gradient(#752fc5, #677ff7);"> 
+          Документація Flask</a>
+          <a class="btn btn-lg ok-btn mt-3 mx-2" href="https://jinja.palletsprojects.com/en/stable/templates/" target="_blank" > 
+            Документація по Шаблонах Jinja</a>
+          
+      </div>
+    </div>
+  </div>
+
+  <!-- Теорія Jinja шаблонів -->
+  <div class="lesson-list-js wow fadeInUp" id="jinja-theory">
+    <a class="collapse-heading collapsed" data-toggle="collapse" data-target="#collapseJinjaTheory" aria-expanded="false">
+      <h4 class="h4 font-weight-normal"><span class="font-weight-bold">#3</span> Теорія: Шаблони Jinja2 у Flask</h4>
+    </a>
+
+    <div id='collapseJinjaTheory' class="collapse">
+      <div class="accordion mt-4" id="accordionJinja">
+        
+        <!-- 1. Основи синтаксису -->
+        <div class="card">
+          <div class="card-header" id="headingSyntax">
+            <h2 class="mb-0">
+              <button class="btn btn-link btn-block text-left" type="button" data-toggle="collapse" data-target="#collapseSyntax" aria-expanded="false" aria-controls="collapseSyntax">
+                <h5>📝 Основи синтаксису Jinja2</h5>
+              </button>
+            </h2>
+          </div>
+          <div id="collapseSyntax" class="collapse" aria-labelledby="headingSyntax" data-parent="#accordionJinja">
+            <div class="card-body">
+              <div class="theory">
+                <h5>Типи тегів у Jinja2:</h5>
+                <ul>
+                  <li><code>{{ "{{ ... }}" }}</code> — виведення змінних та виразів</li>
+                  <li><code>{{ "{% ... %}" }}</code> — управляючі конструкції (if, for, block)</li>
+                  <li><code>{{ "{# ... #}" }}</code> — коментарі (не відображаються в HTML)</li>
+                </ul>
+                <h5 class="mt-4">Приклад виведення змінних:</h5>
+                <pre><code class="html">&lt;!-- templates/hello.html --&gt;
+&lt;h1&gt;Привіт, {{ "{{ name }}" }}!&lt;/h1&gt;
+&lt;p&gt;Ваш вік: {{ "{{ age }}" }} років&lt;/p&gt;
+&lt;p&gt;Email: {{ "{{ user.email }}" }}&lt;/p&gt;
+&lt;p&gt;Перший елемент: {{ "{{ items[0] }}" }}&lt;/p&gt;</code></pre>
+                <h5 class="mt-4">Передача даних з Python:</h5>
+                <pre><code class="python">from flask import Flask, render_template
+
+app = Flask(__name__)
+
+@app.route('/')
+def hello():
+    return render_template('hello.html', 
+                           name='Іван', 
+                           age=25,
+                           user={'email': 'ivan@example.com'},
+                           items=['яблуко', 'банан', 'апельсин'])</code></pre>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 2. Умовні оператори -->
+        <div class="card">
+          <div class="card-header" id="headingConditions">
+            <h2 class="mb-0">
+              <button class="btn btn-link btn-block text-left collapsed" type="button" data-toggle="collapse" data-target="#collapseConditions" aria-expanded="false" aria-controls="collapseConditions">
+                <h5>🔀 Умовні оператори (if/elif/else)</h5>
+              </button>
+            </h2>
+          </div>
+          <div id="collapseConditions" class="collapse" aria-labelledby="headingConditions" data-parent="#accordionJinja">
+            <div class="card-body">
+              <div class="theory">
+                <h5>Базовий синтаксис:</h5>
+                <pre><code class="html">{{ "{% if user %}" }}
+    &lt;p&gt;Привіт, {{ "{{ user.name }}" }}!&lt;/p&gt;
+{{ "{% else %}" }}
+    &lt;p&gt;Привіт, гість!&lt;/p&gt;
+{{ "{% endif %}" }}</code></pre>
+                
+                <h5 class="mt-4">Використання elif:</h5>
+                <pre><code class="html">{{ "{% if user.role == 'admin' %}" }}
+    &lt;span class="badge badge-danger"&gt;Адміністратор&lt;/span&gt;
+{{ "{% elif user.role == 'moderator' %}" }}
+    &lt;span class="badge badge-warning"&gt;Модератор&lt;/span&gt;
+{{ "{% else %}" }}
+    &lt;span class="badge badge-secondary"&gt;Користувач&lt;/span&gt;
+{{ "{% endif %}" }}</code></pre>
+
+                <h5 class="mt-4">Оператори порівняння:</h5>
+                <ul>
+                  <li><code>==</code> — дорівнює</li>
+                  <li><code>!=</code> — не дорівнює</li>
+                  <li><code>&lt;</code>, <code>&gt;</code>, <code>&lt;=</code>, <code>&gt;=</code> — порівняння</li>
+                  <li><code>and</code>, <code>or</code>, <code>not</code> — логічні оператори</li>
+                  <li><code>in</code> — перевірка входження</li>
+                </ul>
+                <pre><code class="html">{{ "{% if age >= 18 and is_verified %}" }}
+    &lt;p&gt;Доступ дозволено&lt;/p&gt;
+{{ "{% endif %}" }}
+
+{{ "{% if 'admin' in user.roles %}" }}
+    &lt;a href="/admin"&gt;Панель адміністратора&lt;/a&gt;
+{{ "{% endif %}" }}</code></pre>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 3. Цикли -->
+        <div class="card">
+          <div class="card-header" id="headingLoops">
+            <h2 class="mb-0">
+              <button class="btn btn-link btn-block text-left collapsed" type="button" data-toggle="collapse" data-target="#collapseLoops" aria-expanded="false" aria-controls="collapseLoops">
+                <h5>🔄 Цикли (for)</h5>
+              </button>
+            </h2>
+          </div>
+          <div id="collapseLoops" class="collapse" aria-labelledby="headingLoops" data-parent="#accordionJinja">
+            <div class="card-body">
+              <div class="theory">
+                <h5>Базовий цикл:</h5>
+                <pre><code class="html">&lt;ul&gt;
+{{ "{% for item in items %}" }}
+    &lt;li&gt;{{ "{{ item }}" }}&lt;/li&gt;
+{{ "{% endfor %}" }}
+&lt;/ul&gt;</code></pre>
+
+                <h5 class="mt-4">Цикл з else (якщо список порожній):</h5>
+                <pre><code class="html">&lt;ul&gt;
+{{ "{% for product in products %}" }}
+    &lt;li&gt;{{ "{{ product.name }}" }} - {{ "{{ product.price }}" }} грн&lt;/li&gt;
+{{ "{% else %}" }}
+    &lt;li&gt;Товарів не знайдено&lt;/li&gt;
+{{ "{% endfor %}" }}
+&lt;/ul&gt;</code></pre>
+
+                <h5 class="mt-4">Спеціальні змінні циклу (loop):</h5>
+                <table class="table table-bordered table-sm">
+                  <thead class="thead-dark"><tr><th>Змінна</th><th>Опис</th></tr></thead>
+                  <tbody>
+                    <tr><td><code>loop.index</code></td><td>Номер ітерації (починається з 1)</td></tr>
+                    <tr><td><code>loop.index0</code></td><td>Номер ітерації (починається з 0)</td></tr>
+                    <tr><td><code>loop.first</code></td><td>True, якщо перша ітерація</td></tr>
+                    <tr><td><code>loop.last</code></td><td>True, якщо остання ітерація</td></tr>
+                    <tr><td><code>loop.length</code></td><td>Загальна кількість елементів</td></tr>
+                  </tbody>
+                </table>
+                <pre><code class="html">&lt;table class="table"&gt;
+{{ "{% for user in users %}" }}
+    &lt;tr class="{{ "{{ 'table-primary' if loop.first else '' }}" }}"&gt;
+        &lt;td&gt;{{ "{{ loop.index }}" }}&lt;/td&gt;
+        &lt;td&gt;{{ "{{ user.name }}" }}&lt;/td&gt;
+    &lt;/tr&gt;
+{{ "{% endfor %}" }}
+&lt;/table&gt;</code></pre>
+
+                <h5 class="mt-4">Ітерація по словнику:</h5>
+                <pre><code class="html">{{ "{% for key, value in user.items() %}" }}
+    &lt;p&gt;&lt;strong&gt;{{ "{{ key }}" }}:&lt;/strong&gt; {{ "{{ value }}" }}&lt;/p&gt;
+{{ "{% endfor %}" }}</code></pre>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 4. Наслідування шаблонів -->
+        <div class="card">
+          <div class="card-header" id="headingInheritance">
+            <h2 class="mb-0">
+              <button class="btn btn-link btn-block text-left collapsed" type="button" data-toggle="collapse" data-target="#collapseInheritance" aria-expanded="false" aria-controls="collapseInheritance">
+                <h5>🏗️ Наслідування шаблонів (extends, block)</h5>
+              </button>
+            </h2>
+          </div>
+          <div id="collapseInheritance" class="collapse" aria-labelledby="headingInheritance" data-parent="#accordionJinja">
+            <div class="card-body">
+              <div class="theory">
+                <h5>Базовий шаблон (base.html):</h5>
+                <pre><code class="html">&lt;!DOCTYPE html&gt;
+&lt;html lang="uk"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;title&gt;{{ "{% block title %}" }}Мій сайт{{ "{% endblock %}" }}&lt;/title&gt;
+    &lt;link rel="stylesheet" href="{{ "{{ url_for('static', filename='css/style.css') }}" }}"&gt;
+    {{ "{% block styles %}" }}{{ "{% endblock %}" }}
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;nav&gt;
+        &lt;a href="/"&gt;Головна&lt;/a&gt;
+        &lt;a href="/about"&gt;Про нас&lt;/a&gt;
+    &lt;/nav&gt;
+    
+    &lt;main class="container"&gt;
+        {{ "{% block content %}" }}{{ "{% endblock %}" }}
+    &lt;/main&gt;
+    
+    &lt;footer&gt;
+        &lt;p&gt;&amp;copy; 2024 Мій сайт&lt;/p&gt;
+    &lt;/footer&gt;
+    
+    {{ "{% block scripts %}" }}{{ "{% endblock %}" }}
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+
+                <h5 class="mt-4">Дочірній шаблон (index.html):</h5>
+                <pre><code class="html">{{ "{% extends 'base.html' %}" }}
+
+{{ "{% block title %}" }}Головна сторінка{{ "{% endblock %}" }}
+
+{{ "{% block content %}" }}
+    &lt;h1&gt;Ласкаво просимо!&lt;/h1&gt;
+    &lt;p&gt;Це головна сторінка сайту.&lt;/p&gt;
+{{ "{% endblock %}" }}</code></pre>
+
+                <h5 class="mt-4">Використання super() для розширення блоку:</h5>
+                <pre><code class="html">{{ "{% extends 'base.html' %}" }}
+
+{{ "{% block styles %}" }}
+    {{ "{{ super() }}" }}
+    &lt;link rel="stylesheet" href="{{ "{{ url_for('static', filename='css/custom.css') }}" }}"&gt;
+{{ "{% endblock %}" }}</code></pre>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 5. Включення (include) -->
+        <div class="card">
+          <div class="card-header" id="headingInclude">
+            <h2 class="mb-0">
+              <button class="btn btn-link btn-block text-left collapsed" type="button" data-toggle="collapse" data-target="#collapseInclude" aria-expanded="false" aria-controls="collapseInclude">
+                <h5>📦 Включення шаблонів (include)</h5>
+              </button>
+            </h2>
+          </div>
+          <div id="collapseInclude" class="collapse" aria-labelledby="headingInclude" data-parent="#accordionJinja">
+            <div class="card-body">
+              <div class="theory">
+                <h5>Базове включення:</h5>
+                <pre><code class="html">&lt;!-- Файл: templates/partials/header.html --&gt;
+&lt;header&gt;
+    &lt;h1&gt;{{ "{{ site_name }}" }}&lt;/h1&gt;
+    &lt;nav&gt;...&lt;/nav&gt;
+&lt;/header&gt;
+
+&lt;!-- Файл: templates/index.html --&gt;
+{{ "{% include 'partials/header.html' %}" }}
+&lt;main&gt;
+    &lt;p&gt;Контент сторінки&lt;/p&gt;
+&lt;/main&gt;
+{{ "{% include 'partials/footer.html' %}" }}</code></pre>
+
+                <h5 class="mt-4">Включення з передачею змінних:</h5>
+                <pre><code class="html">&lt;!-- Файл: templates/partials/card.html --&gt;
+&lt;div class="card"&gt;
+    &lt;h3&gt;{{ "{{ card_title }}" }}&lt;/h3&gt;
+    &lt;p&gt;{{ "{{ card_text }}" }}&lt;/p&gt;
+&lt;/div&gt;
+
+&lt;!-- Використання --&gt;
+{{ "{% include 'partials/card.html' with context %}" }}
+{{ "{% set card_title = 'Новина' %}" }}
+{{ "{% set card_text = 'Текст новини...' %}" }}
+{{ "{% include 'partials/card.html' %}" }}</code></pre>
+
+                <h5 class="mt-4">Ігнорування відсутнього файлу:</h5>
+                <pre><code class="html">{{ "{% include 'partials/sidebar.html' ignore missing %}" }}</code></pre>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 6. Фільтри -->
+        <div class="card">
+          <div class="card-header" id="headingFilters">
+            <h2 class="mb-0">
+              <button class="btn btn-link btn-block text-left collapsed" type="button" data-toggle="collapse" data-target="#collapseFilters" aria-expanded="false" aria-controls="collapseFilters">
+                <h5>🔧 Фільтри</h5>
+              </button>
+            </h2>
+          </div>
+          <div id="collapseFilters" class="collapse" aria-labelledby="headingFilters" data-parent="#accordionJinja">
+            <div class="card-body">
+              <div class="theory">
+                <h5>Популярні вбудовані фільтри:</h5>
+                <table class="table table-bordered table-sm">
+                  <thead class="thead-dark"><tr><th>Фільтр</th><th>Опис</th><th>Приклад</th></tr></thead>
+                  <tbody>
+                    <tr><td><code>upper</code></td><td>Верхній регістр</td><td><code>{{ "{{ name|upper }}" }}</code></td></tr>
+                    <tr><td><code>lower</code></td><td>Нижній регістр</td><td><code>{{ "{{ name|lower }}" }}</code></td></tr>
+                    <tr><td><code>capitalize</code></td><td>Перша літера велика</td><td><code>{{ "{{ name|capitalize }}" }}</code></td></tr>
+                    <tr><td><code>title</code></td><td>Кожне слово з великої</td><td><code>{{ "{{ text|title }}" }}</code></td></tr>
+                    <tr><td><code>trim</code></td><td>Видалити пробіли</td><td><code>{{ "{{ text|trim }}" }}</code></td></tr>
+                    <tr><td><code>length</code></td><td>Довжина</td><td><code>{{ "{{ items|length }}" }}</code></td></tr>
+                    <tr><td><code>default</code></td><td>Значення за замовчуванням</td><td><code>{{ "{{ name|default('Гість') }}" }}</code></td></tr>
+                    <tr><td><code>safe</code></td><td>Не екранувати HTML</td><td><code>{{ "{{ html_content|safe }}" }}</code></td></tr>
+                    <tr><td><code>join</code></td><td>Об'єднати список</td><td><code>{{ "{{ items|join(', ') }}" }}</code></td></tr>
+                    <tr><td><code>replace</code></td><td>Замінити текст</td><td><code>{{ "{{ text|replace('old', 'new') }}" }}</code></td></tr>
+                    <tr><td><code>round</code></td><td>Округлення</td><td><code>{{ "{{ price|round(2) }}" }}</code></td></tr>
+                    <tr><td><code>int</code></td><td>Перетворити в число</td><td><code>{{ "{{ value|int }}" }}</code></td></tr>
+                  </tbody>
+                </table>
+
+                <h5 class="mt-4">Комбінування фільтрів:</h5>
+                <pre><code class="html">&lt;p&gt;{{ "{{ description|truncate(100)|capitalize }}" }}&lt;/p&gt;
+&lt;p&gt;{{ "{{ price|round(2)|string + ' грн' }}" }}&lt;/p&gt;</code></pre>
+
+                <h5 class="mt-4">Створення власного фільтру (Python):</h5>
+                <pre><code class="python">@app.template_filter('format_date')
+def format_date(value, format='%d.%m.%Y'):
+    return value.strftime(format)
+
+# Використання в шаблоні:
+# {{ "{{ article.created_at|format_date }}" }}
+# {{ "{{ article.created_at|format_date('%d %B %Y') }}" }}</code></pre>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 7. url_for та статичні файли -->
+        <div class="card">
+          <div class="card-header" id="headingUrlFor">
+            <h2 class="mb-0">
+              <button class="btn btn-link btn-block text-left collapsed" type="button" data-toggle="collapse" data-target="#collapseUrlFor" aria-expanded="false" aria-controls="collapseUrlFor">
+                <h5>🔗 url_for та статичні файли</h5>
+              </button>
+            </h2>
+          </div>
+          <div id="collapseUrlFor" class="collapse" aria-labelledby="headingUrlFor" data-parent="#accordionJinja">
+            <div class="card-body">
+              <div class="theory">
+                <h5>Генерація URL за назвою функції:</h5>
+                <pre><code class="python"># app.py
+@app.route('/')
+def index():
+    return render_template('index.html')
+
+@app.route('/user/&lt;username&gt;')
+def profile(username):
+    return render_template('profile.html', username=username)
+
+@app.route('/post/&lt;int:post_id&gt;')
+def post(post_id):
+    return render_template('post.html', post_id=post_id)</code></pre>
+
+                <pre><code class="html">&lt;!-- Використання url_for в шаблоні --&gt;
+&lt;a href="{{ "{{ url_for('index') }}" }}"&gt;Головна&lt;/a&gt;
+&lt;a href="{{ "{{ url_for('profile', username='ivan') }}" }}"&gt;Профіль Івана&lt;/a&gt;
+&lt;a href="{{ "{{ url_for('post', post_id=42) }}" }}"&gt;Стаття #42&lt;/a&gt;</code></pre>
+
+                <h5 class="mt-4">Підключення статичних файлів:</h5>
+                <p>Структура папок:</p>
+                <pre><code>project/
+├── app.py
+├── static/
+│   ├── css/
+│   │   └── style.css
+│   ├── js/
+│   │   └── main.js
+│   └── img/
+│       └── logo.png
+└── templates/
+    └── base.html</code></pre>
+
+                <pre><code class="html">&lt;!-- CSS --&gt;
+&lt;link rel="stylesheet" href="{{ "{{ url_for('static', filename='css/style.css') }}" }}"&gt;
+
+&lt;!-- JavaScript --&gt;
+&lt;script src="{{ "{{ url_for('static', filename='js/main.js') }}" }}"&gt;&lt;/script&gt;
+
+&lt;!-- Зображення --&gt;
+&lt;img src="{{ "{{ url_for('static', filename='img/logo.png') }}" }}" alt="Логотип"&gt;</code></pre>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 8. Макроси -->
+        <div class="card">
+          <div class="card-header" id="headingMacros">
+            <h2 class="mb-0">
+              <button class="btn btn-link btn-block text-left collapsed" type="button" data-toggle="collapse" data-target="#collapseMacros" aria-expanded="false" aria-controls="collapseMacros">
+                <h5>⚙️ Макроси (повторювані компоненти)</h5>
+              </button>
+            </h2>
+          </div>
+          <div id="collapseMacros" class="collapse" aria-labelledby="headingMacros" data-parent="#accordionJinja">
+            <div class="card-body">
+              <div class="theory">
+                <h5>Створення макросу:</h5>
+                <pre><code class="html">&lt;!-- templates/macros/forms.html --&gt;
+{{ "{% macro input(name, label, type='text', value='', required=false) %}" }}
+&lt;div class="form-group"&gt;
+    &lt;label for="{{ "{{ name }}" }}"&gt;{{ "{{ label }}" }}&lt;/label&gt;
+    &lt;input type="{{ "{{ type }}" }}" 
+           class="form-control" 
+           id="{{ "{{ name }}" }}" 
+           name="{{ "{{ name }}" }}"
+           value="{{ "{{ value }}" }}"
+           {{ "{{ 'required' if required else '' }}" }}&gt;
+&lt;/div&gt;
+{{ "{% endmacro %}" }}
+
+{{ "{% macro button(text, type='submit', class='btn-primary') %}" }}
+&lt;button type="{{ "{{ type }}" }}" class="btn {{ "{{ class }}" }}"&gt;{{ "{{ text }}" }}&lt;/button&gt;
+{{ "{% endmacro %}" }}</code></pre>
+
+                <h5 class="mt-4">Використання макросів:</h5>
+                <pre><code class="html">{{ "{% from 'macros/forms.html' import input, button %}" }}
+
+&lt;form method="POST"&gt;
+    {{ "{{ input('username', \"Ім'я користувача\", required=true) }}" }}
+    {{ "{{ input('email', 'Email', type='email', required=true) }}" }}
+    {{ "{{ input('password', 'Пароль', type='password', required=true) }}" }}
+    {{ "{{ button('Зареєструватися') }}" }}
+&lt;/form&gt;</code></pre>
+
+                <h5 class="mt-4">Імпортування всіх макросів:</h5>
+                <pre><code class="html">{{ "{% import 'macros/forms.html' as forms %}" }}
+
+{{ "{{ forms.input('name', \"Ім'я\") }}" }}
+{{ "{{ forms.button('Надіслати') }}" }}</code></pre>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 9. Робота з формами -->
+        <div class="card">
+          <div class="card-header" id="headingForms">
+            <h2 class="mb-0">
+              <button class="btn btn-link btn-block text-left collapsed" type="button" data-toggle="collapse" data-target="#collapseForms" aria-expanded="false" aria-controls="collapseForms">
+                <h5>📋 Робота з формами у Flask</h5>
+              </button>
+            </h2>
+          </div>
+          <div id="collapseForms" class="collapse" aria-labelledby="headingForms" data-parent="#accordionJinja">
+            <div class="card-body">
+              <div class="theory">
+                <h5>Обробка форми у Flask:</h5>
+                <pre><code class="python">from flask import Flask, render_template, request, redirect, url_for
+
+app = Flask(__name__)
+
+@app.route('/contact', methods=['GET', 'POST'])
+def contact():
+    if request.method == 'POST':
+        name = request.form['name']
+        email = request.form['email']
+        message = request.form['message']
+        
+        # Обробка даних (збереження в БД, надсилання email тощо)
+        print(f"Повідомлення від {name} ({email}): {message}")
+        
+        return redirect(url_for('thank_you'))
+    
+    return render_template('contact.html')
+
+@app.route('/thank-you')
+def thank_you():
+    return render_template('thank_you.html')</code></pre>
+
+                <h5 class="mt-4">Шаблон форми:</h5>
+                <pre><code class="html">&lt;!-- templates/contact.html --&gt;
+{{ "{% extends 'base.html' %}" }}
+
+{{ "{% block content %}" }}
+&lt;h1&gt;Зв'язатися з нами&lt;/h1&gt;
+
+&lt;form method="POST" action="{{ "{{ url_for('contact') }}" }}"&gt;
+    &lt;div class="form-group"&gt;
+        &lt;label for="name"&gt;Ваше ім'я&lt;/label&gt;
+        &lt;input type="text" class="form-control" id="name" name="name" required&gt;
+    &lt;/div&gt;
+    
+    &lt;div class="form-group"&gt;
+        &lt;label for="email"&gt;Email&lt;/label&gt;
+        &lt;input type="email" class="form-control" id="email" name="email" required&gt;
+    &lt;/div&gt;
+    
+    &lt;div class="form-group"&gt;
+        &lt;label for="message"&gt;Повідомлення&lt;/label&gt;
+        &lt;textarea class="form-control" id="message" name="message" rows="5" required&gt;&lt;/textarea&gt;
+    &lt;/div&gt;
+    
+    &lt;button type="submit" class="btn btn-primary"&gt;Надіслати&lt;/button&gt;
+&lt;/form&gt;
+{{ "{% endblock %}" }}</code></pre>
+
+                <h5 class="mt-4">Збереження введених даних при помилці:</h5>
+                <pre><code class="python">@app.route('/register', methods=['GET', 'POST'])
+def register():
+    error = None
+    if request.method == 'POST':
+        username = request.form['username']
+        if len(username) < 3:
+            error = "Ім'я користувача занадто коротке"
+            return render_template('register.html', error=error, username=username)
+        # ... реєстрація
+    return render_template('register.html', error=error)</code></pre>
+                <pre><code class="html">&lt;input type="text" name="username" value="{{ "{{ username|default('') }}" }}"&gt;
+{{ "{% if error %}" }}
+    &lt;div class="alert alert-danger"&gt;{{ "{{ error }}" }}&lt;/div&gt;
+{{ "{% endif %}" }}</code></pre>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 10. Flash-повідомлення -->
+        <div class="card">
+          <div class="card-header" id="headingFlash">
+            <h2 class="mb-0">
+              <button class="btn btn-link btn-block text-left collapsed" type="button" data-toggle="collapse" data-target="#collapseFlash" aria-expanded="false" aria-controls="collapseFlash">
+                <h5>💬 Flash-повідомлення</h5>
+              </button>
+            </h2>
+          </div>
+          <div id="collapseFlash" class="collapse" aria-labelledby="headingFlash" data-parent="#accordionJinja">
+            <div class="card-body">
+              <div class="theory">
+                <h5>Налаштування та використання:</h5>
+                <pre><code class="python">from flask import Flask, flash, redirect, url_for, render_template
+
+app = Flask(__name__)
+app.secret_key = 'your-secret-key-here'  # Обов'язково для flash!
+
+@app.route('/login', methods=['POST'])
+def login():
+    username = request.form['username']
+    password = request.form['password']
+    
+    if username == 'admin' and password == 'secret':
+        flash('Ви успішно увійшли!', 'success')
+        return redirect(url_for('dashboard'))
+    else:
+        flash('Невірний логін або пароль', 'error')
+        return redirect(url_for('login_page'))
+
+@app.route('/logout')
+def logout():
+    flash('Ви вийшли з системи', 'info')
+    return redirect(url_for('index'))</code></pre>
+
+                <h5 class="mt-4">Відображення flash-повідомлень у шаблоні:</h5>
+                <pre><code class="html">&lt;!-- В base.html --&gt;
+{{ "{% with messages = get_flashed_messages(with_categories=true) %}" }}
+    {{ "{% if messages %}" }}
+        {{ "{% for category, message in messages %}" }}
+            &lt;div class="alert alert-{{ "{{ category }}" }} alert-dismissible fade show"&gt;
+                {{ "{{ message }}" }}
+                &lt;button type="button" class="close" data-dismiss="alert"&gt;
+                    &lt;span&gt;&amp;times;&lt;/span&gt;
+                &lt;/button&gt;
+            &lt;/div&gt;
+        {{ "{% endfor %}" }}
+    {{ "{% endif %}" }}
+{{ "{% endwith %}" }}</code></pre>
+
+                <h5 class="mt-4">Типи повідомлень (для Bootstrap):</h5>
+                <ul>
+                  <li><code>success</code> — зелене (успіх)</li>
+                  <li><code>danger</code> або <code>error</code> — червоне (помилка)</li>
+                  <li><code>warning</code> — жовте (попередження)</li>
+                  <li><code>info</code> — синє (інформація)</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+     <!-- Публікація на сервер -->
+     <!-- <div class="lesson-list-js wow fadeInUp" id="course">
+      <a class="collapse-heading show" data-toggle="collapse" data-target="#collapseTasks" aria-expanded="true">
+        <h4 class="h4 font-weight-normal " ><span class="font-weight-bold ">#2</span>Публікація на сервер</h4>
+      </a>
+  
+      <div id='collapseTasks' class="collapse show">
+        <div class="collapse-pres my-4">
+          <div class="embed-responsive embed-responsive-16by9">
+            <iframe class="embed-responsive-item "
+              src="https://docs.google.com/presentation/d/e/2PACX-1vTN-LyQ1KCGnX5BC1YmXuSU5IoxMo8QNqkTqN22VV5XqJE3Li9OjHDVi9b8Nm4vTeBT5I87n4XA0Yjo/embed?start=false&loop=true&delayms=30000"
+              frameborder="0" width="100%" height="569" allowfullscreen="true" mozallowfullscreen="true"
+              webkitallowfullscreen="true">
+            </iframe> 
+          </div>
+                  <a class="btn btn-lg ok-btn mt-3 mx-2" href="https://dashboard.render.com/" target="_blank" > 
+              Хостинг Render.com</a>
+            
+        </div>
+      </div>
+    </div> -->
+  </main>
+</div>
+ <!-- Nav buttons -->
+ <div class="page-nav-btn-wrapper">
+  <a href="../15/" class="page-nav-left" title='Тема 15. Flask. Основи веб-розробки на Python.'>
+   <span>
+      <svg xmlns="http://www.w3.org/2000/svg"  fill="currentColor" class="bi bi-chevron-left" viewBox="0 0 16 16">
+        <path fill-rule="evenodd" d="M11.354 1.646a.5.5 0 0 1 0 .708L5.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0z"/>
+      </svg>
+   </span>
+   <span class="text-btn-nav">Попередня тема</span>
+  </a>
+  <a href="../17/" class="page-nav-left page-nav-right" title="Тема 17. Flask. Робота з базами даних за допомогою SQLAlchemy ORM.">
+    
+    <span class="text-btn-nav">Наступна тема</span>
+    <span>
+      <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi bi-chevron-right" viewBox="0 0 16 16">
+        <path fill-rule="evenodd" d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z"/>
+      </svg>
+   </span>
+   </a>
+</div>
+
+<!-- /Nav buttons -->
+  <button class="btn" hidden id='arrowTopBtn'  onclick="window.scrollTo(0, 0);">
+    <!-- <svg xmlns="http://www.w3.org/2000/svg"  fill="rgb(82, 82, 82)" class="bi bi-arrow-up-circle-fill" viewBox="0 0 16 16">
+      <path d="M16 8A8 8 0 1 0 0 8a8 8 0 0 0 16 0zm-7.5 3.5a.5.5 0 0 1-1 0V5.707L5.354 7.854a.5.5 0 1 1-.708-.708l3-3a.5.5 0 0 1 .708 0l3 3a.5.5 0 0 1-.708.708L8.5 5.707V11.5z"/>
+    </svg> -->
+  </button>
+  <!-- Footer -->
+  <footer class="footer  mt-auto py-3 wow slideInUp">   
+    <div class="container">
+      <div class="d-flex flex-column align-items-center">
+        <div class="footer-nav d-flex flex-column flex-md-row align-items-center justify-content-md-start">
+          <a class="mr-lg-5  navbar-brand mr-0 logo order-md-0 order-12" href="../index.html"><span>Web</span><span
+              class="text-dark">Teach</span></a>
+          <a class="ml-lg-5 ml-0 nav-item nav-link " href="../#course" 
+            title="Перейти до курсу Python">Курс<span class="sr-only">(current)</span></a>
+          
+          <a class="nav-item nav-link ml-0" href="https://repl.it/languages/python3" title="Відкрити онлайн-редактор коду"
+            target="_blank">Редактор</a>
+
+          
+          
+        </div>
+
+        <div class="d-inline-flex flex-column align-items-center">
+          <span class="muted mr-1">2020-2025 ©  WebTeach. </span>
+          <span class="muted text-center">Всі права застережено. Будь-яке копіювання без згоди автора заборонено.</span>
+        </div>
+      </div>
+    </div>
+    </div>
+    </div>
+  </footer>
+
+  <!-- Modal -->
+  <div class="modal fade" id="sendedModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle"
+    aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title h3" id="exampleModalCenterTitle">Завдання надіслано.</h5>
+          <button type="button" width=30px height=30px class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+
+        <div class="modal-footer">
+          <button type="button" class="ok-btn btn btn-warning btn-lg" data-dismiss="modal">Чудово!</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Scripts -->
+  <script src="https://code.jquery.com/jquery-3.5.1.min.js"
+    integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css" />
+  <script src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+    integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous">
+  </script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
+    integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous">
+  </script>
+  <script src="/src/js/wow.min.js"></script>
+  <script src="/src/js/js_course.js"></script>
+</body>
+
+</html>

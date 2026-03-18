@@ -100,10 +100,10 @@
 
       <!-- #1 Інструкція: Як підключити Tailwind CSS -->
       <div class="lesson-list-js wow fadeInUp" id="course">
-        <a class="collapse-heading " data-toggle="collapse" data-target="#collapseIntro" aria-expanded="false">
+        <a class="collapse-heading " data-toggle="collapse" data-target="#collapseIntro" aria-expanded="true">
           <h4 class="h4  font-weight-normal "><span class="font-weight-bold ">#1</span> Як підключити Tailwind CSS</h4>
         </a>
-        <div id="collapseIntro" class="collapse">
+        <div id="collapseIntro" class="collapse show">
           <div class="collapse-pres mt-4">
             <div class="card-body">
               <p><strong>Tailwind CSS</strong> — це utility-first CSS фреймворк, який дозволяє швидко створювати сучасні інтерфейси прямо в HTML за допомогою утилітарних класів.</p>
@@ -157,26 +157,17 @@ module.exports = {
               <pre><code class="language-html">&lt;link href="./dist/output.css" rel="stylesheet"&gt;</code></pre>
 
               <h5 class="mt-4">Спосіб 3: Tailwind у React (Vite)</h5>
-              <p><strong>Крок 1.</strong> Створіть новий проєкт:</p>
               <pre><code class="language-bash">npm create vite@latest my-app -- --template react
-cd my-app</code></pre>
-              <p class="mt-3"><strong>Крок 2.</strong> Встановіть <code>tailwindcss</code> та <code>@tailwindcss/vite</code>:</p>
-              <pre><code class="language-bash">npm install tailwindcss @tailwindcss/vite</code></pre>
-              <p class="mt-3"><strong>Крок 3.</strong> Додайте плагін у <code>vite.config.js</code>:</p>
-              <pre><code class="language-javascript">import { defineConfig } from 'vite'
-import react from '@vitejs/plugin-react'
-import tailwindcss from '@tailwindcss/vite'
+cd my-app
+npm install -D tailwindcss @tailwindcss/vite</code></pre>
+              <p class="mt-3">Додайте плагін у <code>vite.config.js</code>:</p>
+              <pre><code class="language-javascript">import tailwindcss from '@tailwindcss/vite'
 
 export default defineConfig({
-  plugins: [
-    react(),
-    tailwindcss(),
-  ],
+  plugins: [react(), tailwindcss()],
 })</code></pre>
-              <p class="mt-3"><strong>Крок 4.</strong> Додайте імпорт у <code>src/index.css</code>:</p>
+              <p class="mt-3">Додайте у <code>src/index.css</code>:</p>
               <pre><code class="language-css">@import "tailwindcss";</code></pre>
-              <p class="mt-3"><strong>Крок 5.</strong> Запустіть проєкт:</p>
-              <pre><code class="language-bash">npm run dev</code></pre>
             </div>
           </div>
           <a class="btn btn-lg ok-btn mt-3 mx-2" href="https://tailwindcss.com/docs/installation" target="_blank">
@@ -500,7 +491,22 @@ export default defineConfig({
                     <li class="dot">Тінь картки (<code>shadow-lg</code>)</li>
                   </ol>
 
-
+                  <h6 class="mt-3"><strong>Приклад коду:</strong></h6>
+                  <pre><code class="language-html">&lt;div class="min-h-screen flex items-center justify-center bg-gray-100"&gt;
+  &lt;div class="bg-white rounded-2xl shadow-lg p-8 max-w-sm text-center"&gt;
+    &lt;img
+      src="https://i.pravatar.cc/150"
+      alt="Аватар"
+      class="w-24 h-24 rounded-full mx-auto mb-4"
+    /&gt;
+    &lt;h2 class="text-xl font-bold text-gray-800"&gt;Олександр Коваль&lt;/h2&gt;
+    &lt;p class="text-gray-500 mt-2"&gt;Frontend-розробник | React &amp; Tailwind&lt;/p&gt;
+    &lt;button class="mt-6 bg-blue-500 hover:bg-blue-700 text-white
+      font-bold py-2 px-6 rounded-full transition duration-200"&gt;
+      Підписатись
+    &lt;/button&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</code></pre>
                 </div>
               </div>
             </div>
@@ -528,7 +534,29 @@ export default defineConfig({
                     <li class="dot">Плавні переходи (<code>transition duration-300</code>)</li>
                   </ol>
 
+                  <h6 class="mt-3"><strong>Шаблон:</strong></h6>
+                  <pre><code class="language-html">&lt;div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 p-8"&gt;
 
+  &lt;!-- Картка товару --&gt;
+  &lt;div class="bg-white rounded-xl shadow-md overflow-hidden
+    hover:-translate-y-2 hover:shadow-xl transition duration-300"&gt;
+    &lt;img src="https://picsum.photos/400/250" alt="Товар"
+      class="w-full h-48 object-cover"&gt;
+    &lt;div class="p-6"&gt;
+      &lt;h3 class="text-lg font-semibold text-gray-800"&gt;Назва товару&lt;/h3&gt;
+      &lt;p class="text-gray-500 mt-2"&gt;Короткий опис товару&lt;/p&gt;
+      &lt;div class="flex items-center justify-between mt-4"&gt;
+        &lt;span class="text-2xl font-bold text-green-600"&gt;₴ 999&lt;/span&gt;
+        &lt;button class="bg-green-500 hover:bg-green-700 text-white
+          font-bold py-2 px-4 rounded-lg transition duration-200"&gt;
+          Купити
+        &lt;/button&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+
+  &lt;!-- Повторіть картки для кожного товару --&gt;
+&lt;/div&gt;</code></pre>
                 </div>
               </div>
             </div>
@@ -554,7 +582,23 @@ export default defineConfig({
                     <li class="dot"><strong>Футер</strong> — копірайт, посилання</li>
                   </ol>
 
-
+                  <h6 class="mt-3"><strong>Приклад Hero-секції:</strong></h6>
+                  <pre><code class="language-html">&lt;section class="bg-gradient-to-r from-blue-600 to-purple-700
+  text-white py-20 px-8"&gt;
+  &lt;div class="max-w-4xl mx-auto text-center"&gt;
+    &lt;h1 class="text-4xl md:text-6xl font-bold mb-6"&gt;
+      Створюй швидше з Tailwind
+    &lt;/h1&gt;
+    &lt;p class="text-xl md:text-2xl text-blue-100 mb-8"&gt;
+      Utility-first CSS фреймворк для сучасної веб-розробки
+    &lt;/p&gt;
+    &lt;a href="#" class="bg-white text-blue-600 font-bold py-3 px-8
+      rounded-full text-lg hover:bg-blue-50
+      transition duration-300 inline-block"&gt;
+      Почати безкоштовно
+    &lt;/a&gt;
+  &lt;/div&gt;
+&lt;/section&gt;</code></pre>
 
                   <h6 class="mt-3"><strong>Додаткові вимоги:</strong></h6>
                   <ul>
